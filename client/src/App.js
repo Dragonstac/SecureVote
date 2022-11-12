@@ -5,6 +5,8 @@ import Navbar from './components/Navbar/Navbar';
 
 //Pages
 import Home from './pages/Home';
+import Login from './pages/loginPage';
+
 import SignUp from './pages/SignupPage';
 import Pricing from './pages/PricingPage';
 import Footer from './components/Footer/Footer';
@@ -17,6 +19,7 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route exact path="/" element={<Home/>} />
+				<Route exact path="/login" element={<Login/>} />
 				<Route exact path="/signup" element={<SignUp/>} />
 				<Route exact path="/pricing" element ={<Pricing/>} />
 			</Routes>

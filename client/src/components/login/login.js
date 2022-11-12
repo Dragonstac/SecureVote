@@ -10,9 +10,9 @@ import {
 	FormMessage,
 	FormButton,
 	FormTitle,
-} from './FormStyles';
+} from './loginStyle';
 import { Container } from '../../globalStyles';
-import validateForm from './validateForm';
+import validateForm from './validatelogin';
 
 const Form = () => {
 	const [name, setName] = useState('');
