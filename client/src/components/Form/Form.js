@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
 	FormColumn,
 	FormWrapper,
@@ -21,7 +22,7 @@ const Form = () => {
 	const [confirmPass, setConfirmPass] = useState('');
 	const [error, setError] = useState(null);
 	const [success, setSuccess] = useState(null);
-
+	let history = useNavigate();
 	const handleSubmit = async(e) => {
 		e.preventDefault();
 		const resultError = validateForm({ name, email, password, confirmPass });
@@ -36,6 +37,14 @@ const Form = () => {
 				password :password
 			})
 		});
+				console.log(res);
+				if(res.status!==201){
+					window.alert("Something Went Wrong");
+				}else{
+					window.alert("SignUp Successful");
+					history('/login');
+				}
+			
 
 		if (resultError !== null) {
 			setError(resultError);

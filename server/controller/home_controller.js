@@ -11,7 +11,9 @@ module.exports.signIn=(req,res)=>{
         // other is user's email
         if (err) {
             console.log('error in finding user --> Passport');
-            return res.status(422); // report an error to passport
+            return res.status(422).json({
+                error : "error"
+            }); // report an error to passport
 
         }
                 console.log(user);
@@ -22,7 +24,9 @@ module.exports.signIn=(req,res)=>{
             });// since there is no error bur authentication is not done
         }
         console.log("reached");
-        return res.status(200).user;
+        return res.status(201).json({
+            user : user
+        });
 
     });
  
@@ -39,7 +43,9 @@ module.exports.Create_user= (req,res)=>{
 
     //Now WE FIND USER WITH SAME ID IF IT EXIST OR NOT
         User.findOne({email: req.body.email},(err,user)=>{
-            if(err){console.log('error in finding the user in db'); return res.status(422);}
+            if(err){console.log('error in finding the user in db'); return res.status(422).json({
+                error : "error"
+            });}
 
         if(!user){ // if user does not exist
            
@@ -47,12 +53,16 @@ module.exports.Create_user= (req,res)=>{
                 if(err){console.log('error in creating the user in db',err); return;}
                 console.log("user created");
                 console.log(user);
-                return ;
+                return res.status(201).json({
+                    user : user
+                }) ;
             })
 
         }else{
             console.log('user already exist');
-            return;
+            return res.status(422).json({
+                error : "error"
+            });
         }
 
         })

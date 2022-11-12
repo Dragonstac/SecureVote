@@ -5,7 +5,7 @@ const homeController = require('../controller/home_controller');
 
 console.log("Router initialised");
 router.get('/',homeController.home);
-router.get('/sign-in',homeController.signIn);
+router.post('/sign-in',homeController.signIn);
 router.get('/sign-up',homeController.signUp);
 router.post('/create-user',homeController.Create_user);
 

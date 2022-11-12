@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie'
 import {
 	FormColumn,
 	FormWrapper,
@@ -21,10 +23,35 @@ const Form = () => {
 	const [confirmPass, setConfirmPass] = useState('');
 	const [error, setError] = useState(null);
 	const [success, setSuccess] = useState(null);
+	let history = useNavigate();
+	const [cookies, setCookie] = useCookies(['access_token', 'refresh_token'])
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const resultError = validateForm({ name, email, password, confirmPass });
+		const res =await fetch("/sign-in",{
+			method: "POST",
+			headers :{
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({				
+				email : email,
+				password :password
+			})
+		});
+		console.log(res.statusText);
+		const data= res.json();
+		console.log(data);
+		if(res.status!==201){
+			window.alert("Invalid Email/Password");
+		}else{
+			let expires = new Date()
+			expires.setTime(expires.getTime() + (1000* 1000))
+			setCookie('access_token', res.statusText, { path: '/',  expires})
+			//setCookie('refresh_token', response.data.refresh_token, {path: '/', expires})
+			window.alert("LogIn Successful");
+			history('/');
+		}
 
 		if (resultError !== null) {
 			setError(resultError);
