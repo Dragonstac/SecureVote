@@ -5,7 +5,7 @@ export const data = [
 		id: 'about',
 	},
 	{
-		to: '/signup',
+		to: '/login',
 		text: 'Login',
 	},
 	{
