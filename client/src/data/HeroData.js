@@ -8,7 +8,7 @@ export const heroOne = {
 	description: 'We have designed and implemented the best cloud security solutions',
 	buttonLabel: 'Find More',
 	imgStart: 'start',
-	img: './assets/svg/Deal.svg',
+	img: './assets/svg/project-img-1.webp',
 	start: 'true',
 };
 
@@ -24,7 +24,7 @@ export const heroTwo = {
 
 	linkTo: '/more',
 	imgStart: 'start',
-	img: './assets/svg/Connection.svg',
+	img: './assets/svg/2nd-img.png',
 	start: 'true',
 };
 
