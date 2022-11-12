@@ -50,7 +50,7 @@ const Navbar = () => {
 			<Nav>
 				<NavbarContainer>
 					<NavLogo to="/">
-						<NavIcon height="50px" width="100px" src="./favicon.png" alt="logo" />
+						<NavIcon src="./favicon.png" alt="logo" />
 					<b>SecureVote</b>
 					</NavLogo>
 					<MobileIcon onClick={handleClick}>

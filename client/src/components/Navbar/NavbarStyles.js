@@ -31,15 +31,16 @@ export const NavLogo = styled(Link)`
 	justify-self: flex-start;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 2.4rem;
 	display: flex;
 	align-items: center;
 	z-index: 50;
 `;
 
 export const NavIcon = styled.img`
-	margin-right: 1rem;
-	width: 3rem;
+	margin-right: 0.0rem;
+	height: 4rem;
+	width: 5rem;
 `;
 
 export const MobileIcon = styled.div`

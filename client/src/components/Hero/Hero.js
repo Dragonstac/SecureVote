@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
-import { HeroVideo, HeroSection, HeroText, ButtonWrapper, HeroButton } from './HeroStyles';
+import { HeroVideo, HeroSection, HeroText, ButtonWrapper, HeroButton, HeroText1 } from './HeroStyles';
 // import Popup2 from '../popup/popup2';
 import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
 import { useState, useEffect } from 'react';
@@ -20,19 +20,16 @@ const Hero = () => {
 	
 	return (
 		<HeroSection>
-			<HeroVideo src="./assets/hero_bg.mov" autoPlay loop muted />
+			<HeroVideo src="./assets/bg_layer1.mp4" autoPlay loop muted />
 			<Container>
-				<MainHeading><h3 class="cursive" > <em id="font1" style={{color: '#3784f8'}}>S</em>ecure<em style={{color: '#3784f8'}} id="font2">V</em>ote</h3></MainHeading>
+				<MainHeading><h1 class="cursive" > <em id="font1" style={{color: '#AFF9EC'}}>S</em>ecure<em style={{color: '#AFF9EC'}} id="font2">V</em>ote</h1></MainHeading>
 				
 				<HeroText>
-				<h5>Secure &#9679; Simplified &#9679; sex</h5>
-				<br />
-				 A platform where you can vote without any discrepancy and corruption.
-				 <br />
-				<br/>
-				
-				 
+				<h4>Secure &#124; Smart &#124; Simple</h4>
 				</HeroText>
+				<HeroText1>
+				<b>A platform where you can vote without any discrepancy and corruption.</b>
+				</HeroText1>
 				<ButtonWrapper>
 					<Link to="signup">
 						<Button>Sign Up</Button>

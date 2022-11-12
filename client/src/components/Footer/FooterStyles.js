@@ -88,7 +88,7 @@ export const FooterLinkItems = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin: 16px;
-	text-align: left;
+	text-align: center;
 	box-sizing: border-box;
 	color: #fff;
 
@@ -148,11 +148,12 @@ export const FooterSocialIcon = styled.a`
 export const FooterAddress = styled.div`
 	color: white;
 	margin: 0.4rem auto 0.4rem;
+	
 	max-width: 20rem;
 	font-weight: 500;
 	font-size: 0.875rem;
 	line-height: 2;
-	text-align: center;
+	text-align: left;
 
 	@media screen and (min-width: 1000px) {
 		margin-left: 0px;

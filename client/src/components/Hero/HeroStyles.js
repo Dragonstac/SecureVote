@@ -21,9 +21,18 @@ export const HeroVideo = styled.video`
 `;
 
 export const HeroText = styled.p`
-	margin-bottom: 35px;
-	font-size:20px ;
+	margin-bottom: 40px;
+	font-size:40px ;
 	// font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #fff;
+`;
+export const HeroText1 = styled.p`
+	margin-bottom: 100px;
+	margin-top: 50px;
+	font-size: clamp(0.9rem, 1.5vw, 1.3rem);
 	line-height: 24px;
 	text-align: center;
 	letter-spacing: 2px;

@@ -1,41 +1,42 @@
 import React from 'react';
 
 import { BsFillShieldLockFill } from 'react-icons/bs';
-import { IoIosOptions } from 'react-icons/io';
-import { AiOutlineCloudUpload } from 'react-icons/ai';
-import { BiSupport, BiDollar } from 'react-icons/bi';
-import { GrHostMaintenance } from 'react-icons/gr';
+import { IoIosDocument } from 'react-icons/io';
+import { AiOutlineCloudUpload, AiOutlineFileSearch } from 'react-icons/ai';
+import { FaEthereum } from 'react-icons/fa';
+import { RiSecurePaymentLine } from 'react-icons/ri';
+import {GiMonkey} from 'react-icons/gi'
 const iconStyle = (Icon) => <Icon size="3rem" color="#0f0f0f" />;
 
 export const featuresData = [
 	{
-		name: 'Chatting room',
-		description: 'aree bahoot accha hai bahoot hi accha hai ab kya hi batauu i am in love with codelar',
+		name: 'Security',
+		description: 'The platform is fully secure and votes are stored through smartcontracts.',
 		icon: iconStyle(BsFillShieldLockFill),
 		imgClass: 'one',
 	},
 	{
-		name: 'Project collaboration',
-		description: 'aree bahoot accha hai bahoot hi accha hai ab kya hi batauu i am in love with codelar',
-		icon: iconStyle(IoIosOptions),
+		name: 'Transparency',
+		description: 'All the transactions are transparent and visible to everyone.',
+		icon: iconStyle(AiOutlineFileSearch),
 		imgClass: 'two',
 	},
 	{
-		name: 'Learn in public',
-		description: 'aree bahoot accha hai bahoot hi accha hai ab kya hi batauu i am in love with codelar',
-		icon: iconStyle(GrHostMaintenance),
+		name: 'Immutable',
+		description: 'The votes once casted cannot be changed.',
+		icon: iconStyle(RiSecurePaymentLine),
 		imgClass: 'three',
 	},
 	{
-		name: 'Mentor support',
-		description: 'aree bahoot accha hai bahoot hi accha hai ab kya hi batauu i am in love with codelar',
-		icon: iconStyle(BiSupport),
+		name: 'NFT',
+		description: 'NFT is provided as a token of verification for those who cast vote.',
+		icon: iconStyle(GiMonkey),
 		imgClass: 'four',
 	},
 	{
-		name: 'Coming soon',
-		description: 'aree bahoot accha hai bahoot hi accha hai ab kya hi batauu i am in love with codelar',
-		icon: iconStyle(BiDollar),
+		name: 'Ethereum',
+		description: 'We use Ethereum Blockchain to decentralize the voting system.',
+		icon: iconStyle(FaEthereum),
 		imgClass: 'five',
 	},
 	{

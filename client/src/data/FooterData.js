@@ -41,7 +41,7 @@ export const footerData = [
 	// },
 	{
 		title: 'Developers',
-		links: ['Aashish Gupta', 'Arman', 'Aryan', 'Shreyash'],
+		links: ['Aashish Gupta', 'Md. Armaan Ansari', 'Aryan Mishra', 'Shreyash Srivastava'],
 	},
 	{
 		title: 'T & C',
