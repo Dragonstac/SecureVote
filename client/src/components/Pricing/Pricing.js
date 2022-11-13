@@ -15,6 +15,11 @@ import {
 } from './PricingStyles';
 import { pricingData } from '../../data/PricingData';
 import Particle2 from '../Particle2';
+import Timmer from './timmer';
+
+function sayHello() {
+    alert('Vote successful!');
+  }
 
 function Pricing() {
 	return (
@@ -33,6 +38,7 @@ function Pricing() {
 						align="center"
 					>
 					</TextWrapper>
+					<Timmer/>
 					<PricingContainer>
 						{pricingData.map((card, index) => (
 							<PricingCard key={index}>
@@ -43,7 +49,15 @@ function Pricing() {
 									<PricingCardFeatures>
 										{card.features}
 									</PricingCardFeatures>
-									<Button>Vote Here</Button>
+									
+     
+									<Button onClick={sayHello}>
+									
+										Vote Here
+										
+										</Button>
+	
+    								
 								</PricingCardInfo>
 							</PricingCard>
 						))}
