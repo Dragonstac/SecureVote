@@ -48,6 +48,7 @@ function Pricing() {
 					<br/>
 					
 					<Timmer/>
+					<br/>
 					<PricingContainer>
 						{pricingData.map((card, index) => (
 							<PricingCard key={index}>
