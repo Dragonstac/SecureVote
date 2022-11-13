@@ -29,15 +29,9 @@ function Pricing() {
 			<PricingSection id="pricing">
 			
 				<PricingWrapper>
-					<Heading>Make a choice!</Heading>
-					<TextWrapper
-						mb="1.4rem"
-						weight="600"
-						size="1.1rem"
-						color="white"
-						align="center"
-					>
-					</TextWrapper>
+					<Heading >Make a choice!</Heading>
+					<br/>
+					
 					<Timmer/>
 					<PricingContainer>
 						{pricingData.map((card, index) => (
