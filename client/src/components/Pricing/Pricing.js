@@ -1,9 +1,7 @@
 import React from 'react';
 import { Button, Heading, TextWrapper } from '../../globalStyles';
 import { IconContext } from 'react-icons/lib';
-import abi from "../../utilits/secure.json"
-import { useEffect,useState } from "react";
-import { ethers } from "ethers";
+
 import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
 
 
