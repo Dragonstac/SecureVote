@@ -26,7 +26,7 @@ const Hero = () => {
 			<Particle/>
 			<HeroVideo src="" autoPlay loop muted />
 			<Container>
-				<MainHeading><h1 class="cursive" > <em id="font1" style={{color: '#AFF9EC'}}>S</em>ecure<em style={{color: '#AFF9EC'}} id="font2">V</em>ote</h1></MainHeading>
+				<MainHeading><h1 class="cursive" > <em id="font1" style={{color: '#6789e5'}}>S</em>ecure<em style={{color: '#6789e5'}} id="font2">V</em>ote</h1></MainHeading>
 				
 				<HeroText>
 				<h4>Secure &#124; Smart &#124; Simple</h4>

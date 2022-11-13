@@ -6,10 +6,12 @@ export const PricingSection = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	background: #101522;
+	
+	
 `;
-
 export const PricingWrapper = styled.div`
 	display: flex;
+	
 	flex-direction: column;
 	align-items: center;
 	margin: 0 auto;
@@ -24,6 +26,7 @@ export const PricingWrapper = styled.div`
 
 export const PricingContainer = styled.div`
 	display: flex;
+	
 	justify-content: center;
 	flex-flow: wrap;
 	> div {
@@ -50,17 +53,19 @@ export const PricingCard = styled.div`
 `;
 
 export const PricingCardInfo = styled.div`
+	
 	background: #242424;
 	box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
 	width: 280px;
 	text-decoration: none;
 	border-radius: 4px;
 	height: 100%;
-
+	opacity: 1;
 	display: flex;
 	flex-direction: column;
 	padding: 24px;
-	color: #fff;
+	color: #ffffff;
+	
 	margin: auto;
 	> button {
 		margin-top: auto;
@@ -94,6 +99,7 @@ export const PricingCardText = styled.p`
 	font-size: 1.1rem;
 	margin: 0.4rem 0 1.3rem;
 	color: #a9b3c1;
+	
 `;
 
 export const PricingCardFeatures = styled.ul`
@@ -102,13 +108,13 @@ export const PricingCardFeatures = styled.ul`
 	display: flex;
 	flex-direction: column;
 	color: #a9b3c1;
+	
 `;
 
 export const PricingCardFeature = styled.li`
 	margin-bottom: 1rem;
 	display: flex;
 	font-size: 0.94rem;
-
 	&:before {
 		content: '🎧';
 		margin-right: 0.4rem;

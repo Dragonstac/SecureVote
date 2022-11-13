@@ -1,10 +1,5 @@
 export const pricingData = [
-	// {
-	// 	title: 'Basic',
-	// 	price: '$7.99 user/month after offer period',
-	// 	numAcc: '50-100 accounts',
-	// 	features: ['Secure accounts', 'Best for small business', 'Easy', 'Affordable', '1GB RAM'],
-	// },
+
 	{
 		title: 'Bubbe ke bubbe',
 		price: '$18.99 user/month after offer period',
@@ -28,10 +23,5 @@ export const pricingData = [
 		],
 	},
 
-	// {
-	// 	title: 'Enterprise',
-	// 	price: '$55.50 user/month after offer period ',
-	// 	numAcc: '1000+ Accounts',
-	// 	features: ['Unlimited Storage', 'Scalability', 'Free DNS & Domain'],
-	// },
+
 ];

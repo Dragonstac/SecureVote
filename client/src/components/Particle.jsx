@@ -38,7 +38,7 @@ function Particle() {
                     "shape": {
                         "type": "star",
                         "options": {
-                            "sides": 5
+                            "sides": 1
                         }
                     },
                     "opacity": {
@@ -46,17 +46,17 @@ function Particle() {
                         "random": false,
                         "anim": {
                             "enable": false,
-                            "speed": 1,
+                            "speed": 5,
                             "opacity_min": 0.1,
                             "sync": false
                         }
                     },
                     "size": {
-                        "value": 4,
+                        "value": 2,
                         "random": false,
                         "anim": {
                             "enable": false,
-                            "speed": 40,
+                            "speed": 50,
                             "size_min": 0.1,
                             "sync": false
                         }
