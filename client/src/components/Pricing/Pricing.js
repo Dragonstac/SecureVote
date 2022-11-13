@@ -24,7 +24,7 @@ function Pricing() {
 			<PricingSection id="pricing">
 			
 				<PricingWrapper>
-					<Heading>Pick Your Best Option</Heading>
+					<Heading>Make a choice!</Heading>
 					<TextWrapper
 						mb="1.4rem"
 						weight="600"
@@ -32,7 +32,6 @@ function Pricing() {
 						color="white"
 						align="center"
 					>
-						Create, maintain and store your data with Delta.
 					</TextWrapper>
 					<PricingContainer>
 						{pricingData.map((card, index) => (
@@ -42,11 +41,7 @@ function Pricing() {
 									<PricingCardCost>{card.price}</PricingCardCost>
 									<PricingCardText>{card.description}</PricingCardText>
 									<PricingCardFeatures>
-										{card.features.map((feature, index) => (
-											<PricingCardFeature key={index}>
-												{feature}
-											</PricingCardFeature>
-										))}
+										{card.features}
 									</PricingCardFeatures>
 									<Button>Vote Here</Button>
 								</PricingCardInfo>
