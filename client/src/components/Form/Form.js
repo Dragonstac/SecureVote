@@ -39,12 +39,8 @@ const Form = () => {
 			})
 		});
 				console.log(res);
-				if(res.status!==201){
-					window.alert("Something Went Wrong");
-				}else{
-					window.alert("SignUp Successful");
+				window.alert("SignUp Successful");
 					history('/login');
-				}
 			
 
 		if (resultError !== null) {

@@ -1,6 +1,14 @@
 import React from 'react';
 import { Button, Heading, TextWrapper } from '../../globalStyles';
 import { IconContext } from 'react-icons/lib';
+import abi from "../../utilits/secure.json"
+import { useEffect,useState } from "react";
+import { ethers } from "ethers";
+import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
+
+
+
+
 import {
 	PricingSection,
 	PricingWrapper,
@@ -22,6 +30,13 @@ function sayHello() {
   }
 
 function Pricing() {
+
+	const address = useAddress();
+	console.log(address);
+
+
+
+
 	return (
 		
 		<IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
