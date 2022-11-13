@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { BsFillShieldLockFill } from 'react-icons/bs';
-import { IoIosDocument } from 'react-icons/io';
-import { AiOutlineCloudUpload, AiOutlineFileSearch } from 'react-icons/ai';
+import { BsBarChartLine, BsFillShieldLockFill } from 'react-icons/bs';
+import { AiOutlineFileSearch } from 'react-icons/ai';
 import { FaEthereum } from 'react-icons/fa';
 import { RiSecurePaymentLine } from 'react-icons/ri';
 import {GiMonkey} from 'react-icons/gi'
@@ -40,10 +39,10 @@ export const featuresData = [
 		imgClass: 'five',
 	},
 	{
-		name: 'Coming soon',
+		name: 'Polls',
 		description:
-			'aree bahoot accha hai bahoot hi accha hai ab kya hi batauu i am in love with codelar',
-		icon: iconStyle(AiOutlineCloudUpload),
+			'Create and Deploy fair polls for your organisation.',
+		icon: iconStyle(BsBarChartLine),
 		imgClass: 'six',
 	},
 ];

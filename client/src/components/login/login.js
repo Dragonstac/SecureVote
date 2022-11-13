@@ -15,6 +15,7 @@ import {
 } from './loginStyle';
 import { Container } from '../../globalStyles';
 import validateForm from './validatelogin';
+import Particle from '../Particle';
 
 const Form = () => {
 	const [name, setName] = useState('');
@@ -88,6 +89,7 @@ const Form = () => {
 	];
 	return (
 		<FormSection>
+			<Particle/>
 			<Container>
 				<FormRow>
 					<FormColumn small>

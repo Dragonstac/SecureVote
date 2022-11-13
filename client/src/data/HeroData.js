@@ -2,10 +2,10 @@ export const heroOne = {
 	reverse: true,
 	inverse: true,
 	topLine: {
-		text: 'Founded in 2012',
+		text: 'Technology: A boon',
 	},
-	headline: "We've been in business for 9 years",
-	description: 'We have designed and implemented the best cloud security solutions',
+	headline: "Blockchain is a solution for everything!",
+	description: 'We have designed and implemented the best voting/polling system.',
 	buttonLabel: 'Find More',
 	imgStart: 'start',
 	img: './assets/svg/project-img-1.webp',
@@ -19,7 +19,7 @@ export const heroTwo = {
 		text: 'Designed & Developed',
 	},
 	headline: 'The best practices',
-	description: 'Our clients have had the best experience working with us',
+	description: 'We have used all the best practices while building the project',
 	buttonLabel: 'View Project',
 
 	linkTo: '/more',
@@ -32,11 +32,11 @@ export const heroThree = {
 	reverse: true,
 	inverse: true,
 	topLine: {
-		text: 'Highly reputed brand',
+		text: 'Trusted and Transparent',
 	},
 	headline: 'Why us? ',
 	description:
-		'Our 9 year experience have allowed us to use the most innovative technologies and methodologies',
+		'We have tackled the discrepancies in the voting system, implementing latest techs.',
 	buttonLabel: 'View Project',
 
 	linkTo: '/download',

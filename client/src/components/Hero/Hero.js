@@ -5,6 +5,8 @@ import { HeroVideo, HeroSection, HeroText, ButtonWrapper, HeroButton, HeroText1 
 // import Popup2 from '../popup/popup2';
 import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
 import { useState, useEffect } from 'react';
+import Particle from '../Particle';
+
 
 const Hero = () => {
 	const [hasConnected, setHasConnected] = useState(false);
@@ -19,8 +21,10 @@ const Hero = () => {
 	},[address]);
 	
 	return (
+		
 		<HeroSection>
-			<HeroVideo src="./assets/bg_layer1.mp4" autoPlay loop muted />
+			<Particle/>
+			<HeroVideo src="" autoPlay loop muted />
 			<Container>
 				<MainHeading><h1 class="cursive" > <em id="font1" style={{color: '#AFF9EC'}}>S</em>ecure<em style={{color: '#AFF9EC'}} id="font2">V</em>ote</h1></MainHeading>
 				
@@ -36,7 +40,6 @@ const Hero = () => {
 					</Link>
 					<HeroButton onClick={connectWithMetamask}> {hasConnected ? "Connected" : "Connect your wallet"}</HeroButton>
 				</ButtonWrapper>
-				{/* <Popup2/> */}
 			</Container>
 		</HeroSection>
 	);

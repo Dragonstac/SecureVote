@@ -14,6 +14,7 @@ import {
 } from './FormStyles';
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
+import Particle from '../Particle';
 
 const Form = () => {
 	const [name, setName] = useState('');
@@ -83,6 +84,7 @@ const Form = () => {
 	return (
 		
 		<FormSection method ="POST">
+			<Particle/>
 			<Container>
 				<FormRow>
 					<FormColumn small>

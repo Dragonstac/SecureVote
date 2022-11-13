@@ -14,14 +14,16 @@ import {
 	PricingCard,
 } from './PricingStyles';
 import { pricingData } from '../../data/PricingData';
+import Particle from '../Particle';
 
 function Pricing() {
 	return (
+		
 		<IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
 			<PricingSection id="pricing">
+			
 				<PricingWrapper>
 					<Heading>Pick Your Best Option</Heading>
-
 					<TextWrapper
 						mb="1.4rem"
 						weight="600"

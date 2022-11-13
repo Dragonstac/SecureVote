@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const FormSection = styled.div`
-	/* color: #fff; */
 	padding: 160px 0;
-	/* background: ${({ inverse }) => (inverse ? '#101522' : '#fff')}; */
-	background: #101522;
+	background: #071c2f;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center;
 `;
 
 export const FormTitle = styled.h1`
