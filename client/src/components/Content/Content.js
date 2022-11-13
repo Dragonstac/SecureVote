@@ -10,6 +10,7 @@ import {
 	ImgWrapper,
 	Img,
 	ContentColumn,
+	
 } from './ContentStyles.js';
 
 import { useInView } from 'react-intersection-observer';
@@ -21,6 +22,7 @@ export const Content = ({
 	headline,
 	description,
 	buttonLabel,
+	linkTo,
 	img,
 	alt,
 	inverse,
@@ -69,6 +71,7 @@ export const Content = ({
 							>
 								{description}
 							</Subtitle>
+							<a href={linkTo}>
 							<ContentButton
 								initial={initial}
 								transition={{ delay: 1, duration: 0.6 }}
@@ -78,6 +81,7 @@ export const Content = ({
 							>
 								{buttonLabel}
 							</ContentButton>
+							</a>
 						</TextWrapper>
 					</ContentColumn>
 					<ContentColumn

@@ -1,3 +1,4 @@
+
 export const heroOne = {
 	reverse: true,
 	inverse: true,
@@ -7,6 +8,7 @@ export const heroOne = {
 	headline: "Blockchain is a solution for everything!",
 	description: 'We have designed and implemented the best voting/polling system.',
 	buttonLabel: 'Find More',
+	linkTo: 'https://www.blockchain.com/',
 	imgStart: 'start',
 	img: './assets/svg/project-img-1.webp',
 	start: 'true',
@@ -21,8 +23,7 @@ export const heroTwo = {
 	headline: 'The best practices',
 	description: 'We have used all the best practices while building the project',
 	buttonLabel: 'View Project',
-
-	linkTo: '/more',
+	linkTo: 'https://github.com/aryanmishra29/SecureVote',
 	imgStart: 'start',
 	img: './assets/svg/2nd-img.png',
 	start: 'true',
@@ -37,9 +38,10 @@ export const heroThree = {
 	headline: 'Why us? ',
 	description:
 		'We have tackled the discrepancies in the voting system, implementing latest techs.',
+	
 	buttonLabel: 'View Project',
-
-	linkTo: '/download',
+	
+	linkTo: 'https://github.com/aryanmishra29/SecureVote',
 	imgStart: '',
 	img: './assets/svg/ChartUp.svg',
 	start: 'true',
