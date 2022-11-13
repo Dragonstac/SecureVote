@@ -13,6 +13,7 @@ contract Secure {
 //But, this variable is special because it's called a "state variable" and it's cool because it's stored permanently in contract storage.
 
     address owner;
+    address[] public voters;
     constructor() {
         console.log("Yo yo, I am a contract and I am smart");
         owner=msg.sender;
@@ -28,7 +29,6 @@ contract Secure {
 
 
         }
-
 
          template[] public identity;
            
@@ -53,33 +53,44 @@ function getvotes(uint256 index) public view returns (uint256){
         if(identity.length==0){
         console.log("no identity exist");
         
-    }
+    }   
+        voters.push(msg.sender);
         identity[index].votes++;
         
     }
 
-       function retrieve() public view returns (address){
-            console.log("owner");
-        return owner;
+       function retrievevoters() public view returns (address[] memory){
+            
+        return voters;
     }
-    function winner() public view returns (string memory,string memory,string memory,uint){
-        if(identity[0].votes>identity[1].votes){
-            template storage temp = identity[0];
-            return (temp.name,temp.about,temp.describe,temp.votes);
-        }else if(identity[1].votes>identity[0].votes){
-            template storage temp1 = identity[1];
-            return (temp1.name,temp1.about,temp1.describe,temp1.votes);
-        }else{
-            return ("votes are equal","NILL","NILL",0);
-        }
+    function winner() public view returns (uint256,uint256){
+
+            return (identity[0].votes,identity[1].votes);
+        
+
+    }
+
+    function getdataname(uint index) public view returns (string memory){
+         template storage temp = identity[index];
+         return (temp.name);
+
+    }
+    function getdataabout(uint index) public view returns (string memory){
+         template storage temp = identity[index];
+         return (temp.about);
+
+    }
+    function getdatadescribe(uint index) public view returns (string memory){
+         template storage temp = identity[index];
+         return (temp.describe);
 
     }
 
     function endPoll() public {
             if(msg.sender==owner){
         delete identity;
+        delete voters;
             }
     }
 
 } 
-
