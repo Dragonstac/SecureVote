@@ -7,6 +7,7 @@ import { ethers } from "ethers";
 import { useAddress, useMetamask, useContract } from '@thirdweb-dev/react';
 
 import './nft.css'
+import './nftlink.css'
 
 
 import { Dna } from  'react-loader-spinner'
@@ -52,6 +53,7 @@ const getEthereumObject = () => window.ethereum;
 	   const [isload,setIsLoad]=useState("");
 	   const [isEnd,setIsEnd]=useState("");
 	   const [hasVoted,sethasVoted]=useState(true);
+	   const [isLink,setIsLink]= useState("");
 
 
 	 const provider = new ethers.providers.Web3Provider(ethereum);
@@ -69,6 +71,7 @@ const getEthereumObject = () => window.ethereum;
 			const balance = await editionDrop.balanceOf(address, 0);
 			if (balance.gt(0)) {
 			  setHasClaimedNFT(true);
+			  setIsLink("https://testnets.opensea.io/assets/"+editionDrop.getAddress()+"/0")
 			  console.log("🌟 this user has a membership NFT!");
 			} else {
 			  setHasClaimedNFT(false);
@@ -87,6 +90,7 @@ const getEthereumObject = () => window.ethereum;
 		try {
 		  setIsClaiming(true);
 		  await editionDrop.claim("0", 1);
+		  setIsLink("https://testnets.opensea.io/assets/"+editionDrop.getAddress()+"/0")
 		  console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
 		  setHasClaimedNFT(true);
 		} catch (error) {
@@ -96,6 +100,7 @@ const getEthereumObject = () => window.ethereum;
 		  setIsClaiming(false);
 		}
 	  };
+	  
 
 
 	const vote = async (index)=>{
@@ -223,6 +228,22 @@ const getEthereumObject = () => window.ethereum;
                 <span class="text">{isClaiming? "minting...": "mint your NFT"}</span>
             </span>
         </button>
+				<br/>
+		
+		{/* Link Button */}
+		
+		{hasClaimedNFT?<a href={isLink}>
+		<button class="btn-37">
+			<span class="new">{isLink}</span>
+			<div class="old">
+				<span>See your nft</span>
+				<span aria-hidden>See your NFT</span>
+			</div>
+		</button>
+		</a>:""}
+		
+		
+
 				</PricingWrapper>
 			</PricingSection>
 		</IconContext.Provider>
