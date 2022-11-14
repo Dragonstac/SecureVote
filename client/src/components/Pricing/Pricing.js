@@ -168,7 +168,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(0)}>
+									<Button onClick={()=>vote(0)} disabled={!hasVoted||hasClaimedNFT}>
 									
 										Vote Here
 										
@@ -185,7 +185,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(1)}>
+									<Button onClick={()=>vote(1)} disabled={!hasVoted||hasClaimedNFT}>
 									
 										Vote Here
 										
@@ -196,6 +196,12 @@ const getEthereumObject = () => window.ethereum;
 							</PricingCard>
 							
 					</PricingContainer>
+					<br/>
+					<br/>
+					<Heading>
+						{!hasVoted?"Congratulations! You have successfully voted.":""}</Heading>
+					<br/>
+					<br/>
 					<button class="btn-17" disabled={hasVoted}
         onClick={mintNft}>
             
