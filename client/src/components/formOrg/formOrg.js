@@ -43,7 +43,7 @@ const Form = () => {
 
 	const handleSubmit = async(e) => {
 		e.preventDefault();
-		const resultError = validateForm({ name, about, description});
+		
 		
         const formtxn = await wavePortalContract.addPerson(name,about,description);
         console.log("minting proposal...",formtxn.hash);
@@ -55,12 +55,6 @@ const Form = () => {
         console.log(about);
         console.log(description);
 
-			
-
-		if (resultError !== null) {
-			setError(resultError);
-			return;
-		}
 		setName('');
 		setAbout('');
 		setDescription('');
