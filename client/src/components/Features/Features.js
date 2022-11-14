@@ -17,14 +17,17 @@ import './ButtonVote.css';
 import { useCookies } from 'react-cookie';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+
 const Features = () => {
 	const [cookies, setCookie, removeCookie] = useCookies();
 	let history = useNavigate();
 	function gotovote(){
 		if(cookies.access_token){
 			console.log(cookies.access_token)
+			window.scrollTo(0,0);
 			history('/pricing');
 		}else{
+			window.scrollTo(0,0);
 			history('/login');
 		}
 		
