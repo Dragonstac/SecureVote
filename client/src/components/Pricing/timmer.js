@@ -41,7 +41,7 @@ function timmer() {
   return (
     <div  style={{color: 'white'}} >
         
-        <Countdown date={'2022-11-13T05:48:10.417-07:00'} renderer={renderer} />
+        <Countdown date={'2022-11-14T13:50:00.417+05:30'} renderer={renderer} />
         {/* <Countdown date={Date.now() + 10000} renderer={renderer} /> */}
       
       </div>
