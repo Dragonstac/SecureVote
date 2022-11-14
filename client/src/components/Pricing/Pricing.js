@@ -46,8 +46,10 @@ const getEthereumObject = () => window.ethereum;
 	   const [isName1, setIsName1] = useState("");
 	   const [isAbout1, setIsAbout1] = useState("");
 	   const [isDescription1, setIsDescription1] = useState("");
-	   const [hasVoted, sethasVoted] = useState(true);
-	
+	   const [isload,setIsLoad]=useState("");
+	   const [isEnd,setIsEnd]=useState("");
+	   const [hasVoted,sethasVoted]=useState(true);
+
 
 	  const provider = new ethers.providers.Web3Provider(ethereum);
 	  const signer = provider.getSigner();
@@ -95,15 +97,17 @@ const getEthereumObject = () => window.ethereum;
 
 	const vote = async (index)=>{
 		let count = await wavePortalContract.addvote(index);
-		console.log("Minning",count.hash);
-		
-		count.wait();
-		console.log("minted",count.hash);
+		console.log("Mining",count.hash);
+		await count.wait();
+		console.log("Minted...",count.hash);
 		window.alert("vote sucessful");
 		sethasVoted(false);
-		console.log(hasVoted);
 
+
+		setIsLoad(count.hash);
+		setIsEnd(count.hash);
 	}
+
 	
 		// If they don't have an connected wallet, exit!
 		const calldata =async()=>{
