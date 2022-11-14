@@ -12,4 +12,5 @@ export const data = [
 		to: '/pricing',
 		text: 'Vote Here',
 	},
+	
 ];
