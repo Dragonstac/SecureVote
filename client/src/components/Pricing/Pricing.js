@@ -235,7 +235,7 @@ export function endVote(){
 		
 		{/* Link Button */}
 		
-		{hasClaimedNFT?<a href={isLink}>
+		{hasClaimedNFT?<a href={isLink} target="_blank">
 		<button class="btn-37">
 			<span class="new">{isLink}</span>
 			<div class="old">
