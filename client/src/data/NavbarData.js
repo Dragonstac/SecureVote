@@ -12,5 +12,9 @@ export const data = [
 		to: '/pricing',
 		text: 'Vote Here',
 	},
+	{
+		to: '/formOrg',
+		text: 'Org',
+	},
 	
 ];
