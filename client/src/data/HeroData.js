@@ -20,8 +20,8 @@ export const heroTwo = {
 	topLine: {
 		text: 'Designed & Developed',
 	},
-	headline: 'The best practices',
-	description: 'We have used all the best practices while building the project',
+	headline: 'Techs Used',
+	description: 'We have used ReactJS, NodeJS, MongoDB and Blockchain while building the project',
 	buttonLabel: 'View Project',
 	linkTo: 'https://github.com/aryanmishra29/SecureVote',
 	imgStart: 'start',
