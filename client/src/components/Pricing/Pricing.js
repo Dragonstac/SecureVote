@@ -25,11 +25,8 @@ import { pricingData } from '../../data/PricingData';
 import Particle2 from '../Particle2';
 import Timmer from './timmer';
 const getEthereumObject = () => window.ethereum;
-function sayHello() {
-    alert('Vote successful!');
-  }
 
-function Pricing() {
+  function Pricing() {
 
 	const address = useAddress();
 	console.log(address);
@@ -42,9 +39,13 @@ function Pricing() {
 	  const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
 	  // isClaiming lets us easily keep a loading state while the NFT is minting.
 	  const [isClaiming, setIsClaiming] = useState(false);
-	//   const [isName, setIsName] = useState("");
-	//   const [isAbout, setIsAbout] = useState("");
-	//   const [isDescription, setIsDescription] = useState("");
+	  const [isName, setIsName] = useState("");
+	   const [isAbout, setIsAbout] = useState("");
+	   const [isDescription, setIsDescription] = useState("");
+	   const [isName1, setIsName1] = useState("");
+	   const [isAbout1, setIsAbout1] = useState("");
+	   const [isDescription1, setIsDescription1] = useState("");
+	
 
 	  const provider = new ethers.providers.Web3Provider(ethereum);
 	  const signer = provider.getSigner();
@@ -91,13 +92,22 @@ function Pricing() {
 
 
 	const vote = async ()=>{
-
+		let count = await wavePortalContract.addvote(0);
+		window.alert("vote sucessful");
 
 
 	}
+	const vote1 = async ()=>{
+		let count = await wavePortalContract.addvote(1);
+		window.alert("vote sucessful");
+
+
+	}
+
 	
-	
-		const etf=async ()=>{
+		// If they don't have an connected wallet, exit!
+		const calldata =async()=>{
+		
 			let count = await wavePortalContract.getvotes(0);
 			console.log("Retrieved total wave count...", count.toNumber());
 			let name = await wavePortalContract.getdataname(0);
@@ -106,7 +116,30 @@ function Pricing() {
         console.log(about.toString());
         let description = await wavePortalContract.getdatadescribe(0);
         console.log(description.toString());
-		}
+
+
+		let name1 = await wavePortalContract.getdataname(1);
+             console.log( name1.toString());
+	 	let about1 = await wavePortalContract.getdataabout(1);
+         console.log(about1.toString());
+         let description1 = await wavePortalContract.getdatadescribe(1);
+         console.log(description1.toString());
+		setIsName(name);
+			setIsAbout(about);
+			setIsDescription(description);
+			setIsName1(name1);
+			setIsAbout1(about1);
+			setIsDescription1(description1);
+			console.log(isName);
+		
+	}
+	
+		
+	useEffect(() => {
+		calldata();
+	  },[])
+	
+	
 		
 		
 	return (
@@ -122,18 +155,16 @@ function Pricing() {
 					<Timmer/>
 					<br/>
 					<PricingContainer>
-						{pricingData.map((card, index) => (
-							<PricingCard key={index}>
+						
+							<PricingCard >
 								<PricingCardInfo>
-									<PricingCardPlan>{card.title}</PricingCardPlan>
-									<PricingCardCost>{card.price}</PricingCardCost>
-									<PricingCardText>{card.description}</PricingCardText>
-									<PricingCardFeatures>
-										{card.features}
-									</PricingCardFeatures>
+									<PricingCardPlan>{isName}</PricingCardPlan>
+									<PricingCardCost>{isAbout}</PricingCardCost>
+									<PricingCardText>{isDescription}</PricingCardText>
+									
 									
      
-									<Button onClick={sayHello}>
+									<Button onClick={vote}>
 									
 										Vote Here
 										
@@ -142,7 +173,24 @@ function Pricing() {
     								
 								</PricingCardInfo>
 							</PricingCard>
-						))}
+							<PricingCard >
+								<PricingCardInfo>
+									<PricingCardPlan>{isName1}</PricingCardPlan>
+									<PricingCardCost>{isAbout1}</PricingCardCost>
+									<PricingCardText>{isDescription1}</PricingCardText>
+									
+									
+     
+									<Button onClick={vote1}>
+									
+										Vote Here
+										
+										</Button>
+	
+    								
+								</PricingCardInfo>
+							</PricingCard>
+					
 					</PricingContainer>
 				</PricingWrapper>
 			</PricingSection>
