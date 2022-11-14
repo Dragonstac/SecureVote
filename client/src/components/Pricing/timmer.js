@@ -1,6 +1,8 @@
 import React from "react";
 import { TextWrapper } from '../../globalStyles';
 import Countdown from "react-countdown";
+import { endVote } from "./Pricing";
+
 
 // Random component
 const Completionist = () => <span  style={{color: 'white'}} ><TextWrapper
@@ -15,6 +17,7 @@ align="center"
 // Renderer callback with condition
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
+    endVote();
     // Render a complete state
     return <Completionist />;
   } else {
@@ -41,7 +44,7 @@ function timmer() {
   return (
     <div  style={{color: 'white'}} >
         
-        <Countdown date={'2022-11-14T19:49:00.417+05:30'} renderer={renderer} />
+        <Countdown date={'2022-11-15T03:35:00.417+05:30'} renderer={renderer} />
         {/* <Countdown date={Date.now() + 10000} renderer={renderer} /> */}
       
       </div>

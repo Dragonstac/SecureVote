@@ -31,6 +31,10 @@ import Particle2 from '../Particle2';
 import Timmer from './timmer';
 const getEthereumObject = () => window.ethereum;
 
+export function endVote(){
+	console.log("Voting End");
+}
+
   function Pricing() {
 
 	const address = useAddress();
@@ -113,10 +117,9 @@ const getEthereumObject = () => window.ethereum;
 		sethasVoted(false);
 
 		setIsEnd(count.hash);
-		
-		
 	}
 
+	
 	
 		// If they don't have an connected wallet, exit!
 		const calldata =async()=>{
