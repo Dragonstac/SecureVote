@@ -9,6 +9,9 @@ import { useAddress, useMetamask, useContract } from '@thirdweb-dev/react';
 import './nft.css'
 
 
+import { Dna } from  'react-loader-spinner'
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 
 import {
 	PricingSection,
@@ -156,6 +159,16 @@ const getEthereumObject = () => window.ethereum;
 				<PricingWrapper>
 					<Heading >Make a choice!</Heading>
 					<br/>
+
+					<Dna
+						visible={true}
+						height="80"
+						width="80"
+						ariaLabel="dna-loading"
+						wrapperStyle={{}}
+						wrapperClass="dna-wrapper"
+						/>
+
 					
 					<Timmer/>
 					<br/>
