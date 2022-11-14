@@ -1,3 +1,35 @@
+import { ethers } from "ethers";
+import abi from "../utilits/secure.json"
+import React from 'react';
+import { useAddress, useMetamask, useContract } from '@thirdweb-dev/react';
+async function carddata(){
+	
+	const { ethereum } = window;
+	const contractAddress = "0x9E3F72e647302fe1B95A5021Bf825c1A43516034";
+	const contractABI = abi.abi;
+	const provider = new ethers.providers.Web3Provider(ethereum);
+	const signer = provider.getSigner();
+	const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
+	
+			let name = await wavePortalContract.getdataname(0);
+            console.log( name.toString());
+			let about = await wavePortalContract.getdataabout(0);
+        console.log(about.toString());
+        let description = await wavePortalContract.getdatadescribe(0);
+        console.log(description.toString());
+		let name1 = await wavePortalContract.getdataname(1);
+            console.log( name1.toString());
+			let about1 = await wavePortalContract.getdataabout(1);
+        console.log(about1.toString());
+        let description1 = await wavePortalContract.getdatadescribe(1);
+        console.log(description1.toString());
+
+}
+
+
+carddata()
+
+
 export const pricingData = [
 
 	{

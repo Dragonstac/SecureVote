@@ -1,15 +1,10 @@
 import React from 'react';
 import { Button, Heading, TextWrapper } from '../../globalStyles';
 import { IconContext } from 'react-icons/lib';
-<<<<<<< Updated upstream
-
-import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
-=======
 import abi from "../../utilits/secure.json"
 import { useEffect,useState } from "react";
 import { ethers } from "ethers";
 import { useAddress, useMetamask, useContract } from '@thirdweb-dev/react';
->>>>>>> Stashed changes
 
 
 
