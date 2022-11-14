@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 //Pages
 import Home from './pages/Home';
 import Login from './pages/loginPage';
+import FormOrg from './components/formOrg/formOrg'
 
 import SignUp from './pages/SignupPage';
 import Pricing from './pages/PricingPage';
@@ -22,6 +23,7 @@ function App() {
 				<Route exact path="/login" element={<Login/>} />
 				<Route exact path="/signup" element={<SignUp/>} />
 				<Route exact path="/pricing" element ={<Pricing/>} />
+				<Route exact path="/formOrg" element ={<FormOrg/>} />
 
 			</Routes>
 			<Footer />

@@ -51,7 +51,7 @@ const getEthereumObject = () => window.ethereum;
 	   const [hasVoted,sethasVoted]=useState(true);
 
 
-	  const provider = new ethers.providers.Web3Provider(ethereum);
+	 const provider = new ethers.providers.Web3Provider(ethereum);
 	  const signer = provider.getSigner();
 	  const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 	  useEffect(() => {
