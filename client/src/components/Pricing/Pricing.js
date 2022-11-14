@@ -97,15 +97,16 @@ const getEthereumObject = () => window.ethereum;
 
 	const vote = async (index)=>{
 		let count = await wavePortalContract.addvote(index);
+		setIsLoad(count.hash);
 		console.log("Mining",count.hash);
 		await count.wait();
 		console.log("Minted...",count.hash);
 		window.alert("vote sucessful");
 		sethasVoted(false);
 
-
-		setIsLoad(count.hash);
 		setIsEnd(count.hash);
+		
+		
 	}
 
 	
