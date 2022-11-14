@@ -14,8 +14,27 @@ import { featuresData } from '../../data/FeaturesData';
 import { ButtonWrapper, HeroButton } from '../Hero/HeroStyles';
 import { Link } from 'react-router-dom';
 import './ButtonVote.css';
+import { useCookies } from 'react-cookie';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Features = () => {
+	const [cookies, setCookie, removeCookie] = useCookies();
+	let history = useNavigate();
+	function gotovote(){
+		if(cookies.access_token){
+			console.log(cookies.access_token)
+			history('/pricing');
+		}else{
+			history('/login');
+		}
+		
+
+		
+
+	}
+
+
+
 	const initial = {
 		y: 40,
 		opacity: 0,
@@ -53,7 +72,7 @@ const Features = () => {
 				<br/>
 				<br/>
 				<center>
-				<button class="btn-29" >
+				<button class="btn-29" onClick={gotovote}>
 					
 					<span class="text-container">
 					<span class="text">Hey! Voting is Live, Click Here to Vote</span>
