@@ -6,6 +6,7 @@ import { useEffect,useState } from "react";
 import { ethers } from "ethers";
 import { useAddress, useMetamask, useContract } from '@thirdweb-dev/react';
 
+import './nft.css'
 
 
 
@@ -45,6 +46,7 @@ const getEthereumObject = () => window.ethereum;
 	   const [isName1, setIsName1] = useState("");
 	   const [isAbout1, setIsAbout1] = useState("");
 	   const [isDescription1, setIsDescription1] = useState("");
+	   const [hasVoted, sethasVoted] = useState(true);
 	
 
 	  const provider = new ethers.providers.Web3Provider(ethereum);
@@ -91,19 +93,17 @@ const getEthereumObject = () => window.ethereum;
 	  };
 
 
-	const vote = async ()=>{
-		let count = await wavePortalContract.addvote(0);
+	const vote = async (index)=>{
+		let count = await wavePortalContract.addvote(index);
+		console.log("Minning",count.hash);
+		
+		count.wait();
+		console.log("minted",count.hash);
 		window.alert("vote sucessful");
-
+		sethasVoted(false);
+		console.log(hasVoted);
 
 	}
-	const vote1 = async ()=>{
-		let count = await wavePortalContract.addvote(1);
-		window.alert("vote sucessful");
-
-
-	}
-
 	
 		// If they don't have an connected wallet, exit!
 		const calldata =async()=>{
@@ -164,7 +164,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={vote}>
+									<Button onClick={()=>vote(0)}>
 									
 										Vote Here
 										
@@ -181,7 +181,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={vote1}>
+									<Button onClick={()=>vote(1)}>
 									
 										Vote Here
 										
@@ -190,11 +190,19 @@ const getEthereumObject = () => window.ethereum;
     								
 								</PricingCardInfo>
 							</PricingCard>
-					
+							
 					</PricingContainer>
+					<button class="btn-17" disabled={hasVoted}
+        onClick={mintNft}>
+            
+            <span class="text-container">
+                <span class="text">{isClaiming? "minting...": "mint your NFT"}</span>
+            </span>
+        </button>
 				</PricingWrapper>
 			</PricingSection>
 		</IconContext.Provider>
+		
 	);
 }
 export default Pricing;
