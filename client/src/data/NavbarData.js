@@ -9,8 +9,9 @@ export const data = [
 		text: 'Login',
 	},
 	{
-		to: '/pricing',
+		to: '/',
 		text: 'Vote Here',
+		id: 'voteButton',
 	},
 	{
 		to: '/formOrg',

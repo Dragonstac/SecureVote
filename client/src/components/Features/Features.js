@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Section } from '../../globalStyles';
+import { Button, Container, Section } from '../../globalStyles';
 import {
 	FeatureText,
 	FeatureTitle,
@@ -8,8 +8,12 @@ import {
 	FeatureImageWrapper,
 	FeatureName,
 	FeatureTextWrapper,
+	FeatureButton,
 } from './FeaturesStyles';
 import { featuresData } from '../../data/FeaturesData';
+import { ButtonWrapper, HeroButton } from '../Hero/HeroStyles';
+import { Link } from 'react-router-dom';
+import './ButtonVote.css';
 
 const Features = () => {
 	const initial = {
@@ -35,14 +39,28 @@ const Features = () => {
 							transition={{ duration: 0.5 + index * 0.1 }}
 							key={index}
 						>
-							<FeatureImageWrapper className={el.imgClass}>
+							<FeatureImageWrapper className={el.imgClass} >
 								{el.icon}
 							</FeatureImageWrapper>
-							<FeatureName>{el.name}</FeatureName>
+							<FeatureName id="voteButton">{el.name}</FeatureName>
 							<FeatureText>{el.description}</FeatureText>
 						</FeatureColumn>
 					))}
+					
 				</FeatureWrapper>
+				<br/>
+				<br/>
+				<br/>
+				<center>
+				<button class="btn-29" >
+					
+					<span class="text-container">
+					<span class="text">Hey! Voting is Live, Click Here to Vote</span>
+					</span>
+					
+				</button>
+				</center>
+
 			</Container>
 		</Section>
 	);

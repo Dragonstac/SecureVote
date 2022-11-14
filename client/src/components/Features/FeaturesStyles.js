@@ -9,6 +9,7 @@ export const FeatureTitle = styled.h2`
 	margin: auto;
 `;
 
+
 export const FeatureTextWrapper = styled.div`
 	position: relative;
 	padding: 0 0 20px;
