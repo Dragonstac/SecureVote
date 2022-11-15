@@ -129,21 +129,21 @@ const getEthereumObject = () => window.ethereum;
 		// If they don't have an connected wallet, exit!
 		const calldata =async()=>{
 		
-			let count = await wavePortalContract.getvotes(0);
+			let count = await wavePortalContract.getvotes(2);
 			console.log("Retrieved total wave count...", count.toNumber());
-			let name = await wavePortalContract.getdataname(0);
+			let name = await wavePortalContract.getdataname(2);
             console.log( name.toString());
-			let about = await wavePortalContract.getdataabout(0);
+			let about = await wavePortalContract.getdataabout(2);
         console.log(about.toString());
-        let description = await wavePortalContract.getdatadescribe(0);
+        let description = await wavePortalContract.getdatadescribe(2);
         console.log(description.toString());
 
 
-		let name1 = await wavePortalContract.getdataname(1);
+		let name1 = await wavePortalContract.getdataname(3);
              console.log( name1.toString());
-	 	let about1 = await wavePortalContract.getdataabout(1);
+	 	let about1 = await wavePortalContract.getdataabout(3);
          console.log(about1.toString());
-         let description1 = await wavePortalContract.getdatadescribe(1);
+         let description1 = await wavePortalContract.getdatadescribe(3);
          console.log(description1.toString());
 		setIsName(name);
 			setIsAbout(about);
@@ -195,7 +195,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(0)} >
+									<Button onClick={()=>vote(2)} >
 									
 										Vote Here
 										
@@ -212,7 +212,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(1)}>
+									<Button onClick={()=>vote(3)}>
 									
 										Vote Here
 										
