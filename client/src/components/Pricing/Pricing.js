@@ -5,7 +5,10 @@ import abi from "../../utilits/secure.json"
 import { useEffect,useState } from "react";
 import { ethers } from "ethers";
 import { useAddress, useMetamask, useContract } from '@thirdweb-dev/react';
-
+import Img1 from './1st.png'
+import Img2 from './2nd.jpg'
+import Img3 from './3rd.png'
+import Img4 from './4th.png'
 import './nft.css'
 import './nftlink.css'
 
@@ -129,21 +132,21 @@ const getEthereumObject = () => window.ethereum;
 		// If they don't have an connected wallet, exit!
 		const calldata =async()=>{
 		
-			let count = await wavePortalContract.getvotes(0);
+			let count = await wavePortalContract.getvotes(2);
 			console.log("Retrieved total wave count...", count.toNumber());
-			let name = await wavePortalContract.getdataname(0);
+			let name = await wavePortalContract.getdataname(2);
             console.log( name.toString());
-			let about = await wavePortalContract.getdataabout(0);
+			let about = await wavePortalContract.getdataabout(2);
         console.log(about.toString());
-        let description = await wavePortalContract.getdatadescribe(0);
+        let description = await wavePortalContract.getdatadescribe(2);
         console.log(description.toString());
 
 
-		let name1 = await wavePortalContract.getdataname(1);
+		let name1 = await wavePortalContract.getdataname(3);
              console.log( name1.toString());
-	 	let about1 = await wavePortalContract.getdataabout(1);
+	 	let about1 = await wavePortalContract.getdataabout(3);
          console.log(about1.toString());
-         let description1 = await wavePortalContract.getdatadescribe(1);
+         let description1 = await wavePortalContract.getdatadescribe(3);
          console.log(description1.toString());
 		setIsName(name);
 			setIsAbout(about);
@@ -186,8 +189,27 @@ const getEthereumObject = () => window.ethereum;
 					<Timmer/>
 					<br/>
 					<PricingContainer>
+					<PricingCard >
+					<img src={Img4} width="279px" height="146px" alt="" />
+								<PricingCardInfo>
+									<PricingCardPlan>AAP</PricingCardPlan>
+									<PricingCardCost>Raj Verma</PricingCardCost>
+									<PricingCardText>I will bring Odd/Even Rule in the state and reduce pollution, also all our processes will be as transparent as blockchain.</PricingCardText>
+									
+									
+     
+									<Button >
+									
+										Vote Here
+										
+										</Button>
+	
+    								
+								</PricingCardInfo>
+							</PricingCard>
 						
 							<PricingCard >
+							<img src={Img3} width="279px" height="146px" alt="" />
 								<PricingCardInfo>
 									<PricingCardPlan>{isName}</PricingCardPlan>
 									<PricingCardCost>{isAbout}</PricingCardCost>
@@ -195,7 +217,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(0)} >
+									<Button onClick={()=>vote(2)} >
 									
 										Vote Here
 										
@@ -205,6 +227,7 @@ const getEthereumObject = () => window.ethereum;
 								</PricingCardInfo>
 							</PricingCard>
 							<PricingCard >
+							<img src={Img1} width="279px" height="146px" alt="" />
 								<PricingCardInfo>
 									<PricingCardPlan>{isName1}</PricingCardPlan>
 									<PricingCardCost>{isAbout1}</PricingCardCost>
@@ -212,7 +235,25 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(1)}>
+									<Button onClick={()=>vote(3)}>
+									
+										Vote Here
+										
+										</Button>
+	
+    								
+								</PricingCardInfo>
+							</PricingCard>
+							<PricingCard >
+							<img src={Img2} width="279px" height="146px" alt="" />
+								<PricingCardInfo>
+									<PricingCardPlan>BSP</PricingCardPlan>
+									<PricingCardCost>Radhika Dubey</PricingCardCost>
+									<PricingCardText>I will never let prejudices and discrimination affect people. I will ensure women security and opportunities for women.</PricingCardText>
+									
+									
+     
+									<Button >
 									
 										Vote Here
 										
@@ -222,9 +263,11 @@ const getEthereumObject = () => window.ethereum;
 								</PricingCardInfo>
 							</PricingCard>
 							
+							
 					</PricingContainer>
 					<br/>
 					<br/>
+					<br/> <br/> <br/> <br/><br/><br/><br/>
 					<Heading>
 						{!hasVoted?"Congratulations! You have successfully voted.":""}</Heading>
 					<br/>

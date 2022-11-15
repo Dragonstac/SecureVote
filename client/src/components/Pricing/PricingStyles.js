@@ -87,16 +87,17 @@ export const PricingCardInfo = styled.div`
 `;
 
 export const PricingCardPlan = styled.h3`
+	color: #007dfb;
 	margin-bottom: 5px;
-	font-size: 2rem;
+	font-size: 2.5rem;
 `;
 
 export const PricingCardCost = styled.h4`
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 `;
 
 export const PricingCardText = styled.p`
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	margin: 0.4rem 0 1.3rem;
 	color: #a9b3c1;
 	
