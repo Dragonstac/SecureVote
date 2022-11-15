@@ -109,6 +109,10 @@ const getEthereumObject = () => window.ethereum;
 
 
 	const vote = async (index)=>{
+		if(hasClaimedNFT||!	hasVoted){
+			window.alert("Sorry! You Have Already Voted");
+			return;
+		}
 		let count = await wavePortalContract.addvote(index);
 		setIsLoad(count.hash);
 		console.log("Mining",count.hash);
@@ -191,7 +195,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(0)} disabled={!hasVoted||hasClaimedNFT}>
+									<Button onClick={()=>vote(0)} >
 									
 										Vote Here
 										
@@ -208,7 +212,7 @@ const getEthereumObject = () => window.ethereum;
 									
 									
      
-									<Button onClick={()=>vote(1)} disabled={!hasVoted||hasClaimedNFT}>
+									<Button onClick={()=>vote(1)}>
 									
 										Vote Here
 										
