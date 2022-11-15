@@ -5,7 +5,10 @@ import abi from "../../utilits/secure.json"
 import { useEffect,useState } from "react";
 import { ethers } from "ethers";
 import { useAddress, useMetamask, useContract } from '@thirdweb-dev/react';
-
+import Img1 from './1st.png'
+import Img2 from './2nd.jpg'
+import Img3 from './3rd.png'
+import Img4 from './4th.png'
 import './nft.css'
 import './nftlink.css'
 
@@ -187,6 +190,7 @@ const getEthereumObject = () => window.ethereum;
 					<br/>
 					<PricingContainer>
 					<PricingCard >
+					<img src={Img4} width="279px" height="146px" alt="" />
 								<PricingCardInfo>
 									<PricingCardPlan>AAP</PricingCardPlan>
 									<PricingCardCost>Raj Verma</PricingCardCost>
@@ -205,6 +209,7 @@ const getEthereumObject = () => window.ethereum;
 							</PricingCard>
 						
 							<PricingCard >
+							<img src={Img3} width="279px" height="146px" alt="" />
 								<PricingCardInfo>
 									<PricingCardPlan>{isName}</PricingCardPlan>
 									<PricingCardCost>{isAbout}</PricingCardCost>
@@ -222,6 +227,7 @@ const getEthereumObject = () => window.ethereum;
 								</PricingCardInfo>
 							</PricingCard>
 							<PricingCard >
+							<img src={Img1} width="279px" height="146px" alt="" />
 								<PricingCardInfo>
 									<PricingCardPlan>{isName1}</PricingCardPlan>
 									<PricingCardCost>{isAbout1}</PricingCardCost>
@@ -239,6 +245,7 @@ const getEthereumObject = () => window.ethereum;
 								</PricingCardInfo>
 							</PricingCard>
 							<PricingCard >
+							<img src={Img2} width="279px" height="146px" alt="" />
 								<PricingCardInfo>
 									<PricingCardPlan>BSP</PricingCardPlan>
 									<PricingCardCost>Radhika Dubey</PricingCardCost>
