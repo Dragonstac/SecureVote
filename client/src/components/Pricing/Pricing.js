@@ -267,6 +267,7 @@ const getEthereumObject = () => window.ethereum;
 					</PricingContainer>
 					<br/>
 					<br/>
+					<br/> <br/> <br/> <br/><br/><br/><br/>
 					<Heading>
 						{!hasVoted?"Congratulations! You have successfully voted.":""}</Heading>
 					<br/>

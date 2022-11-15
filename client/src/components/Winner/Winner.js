@@ -43,24 +43,24 @@ function Winner(){
 	  
       const calldata =async()=>{
 		
-        let count = await wavePortalContract.getvotes(0);
+        let count = await wavePortalContract.getvotes(2);
         console.log("Retrieved total wave count...", count.toNumber());
-        let name = await wavePortalContract.getdataname(0);
+        let name = await wavePortalContract.getdataname(2);
         console.log( name.toString());
-        let about = await wavePortalContract.getdataabout(0);
+        let about = await wavePortalContract.getdataabout(2);
     console.log(about.toString());
-    let description = await wavePortalContract.getdatadescribe(0);
+    let description = await wavePortalContract.getdatadescribe(2);
     console.log(description.toString());
 
 
-    let name1 = await wavePortalContract.getdataname(1);
+    let name1 = await wavePortalContract.getdataname(3);
          console.log( name1.toString());
-     let about1 = await wavePortalContract.getdataabout(1);
+     let about1 = await wavePortalContract.getdataabout(3);
      console.log(about1.toString());
-     let description1 = await wavePortalContract.getdatadescribe(1);
+     let description1 = await wavePortalContract.getdatadescribe(3);
      console.log(description1.toString());
-     let votes1 = await wavePortalContract.getvotes(0);
-     let votes2 = await wavePortalContract.getvotes(1);
+     let votes1 = await wavePortalContract.getvotes(2);
+     let votes2 = await wavePortalContract.getvotes(3);
      console.log(votes1.toNumber());
      console.log(votes2.toNumber());
      setVote1(votes1.toNumber());
@@ -91,6 +91,19 @@ useEffect(() => {
 
 					<br/>
 					<PricingContainer>
+					<PricingCard >
+								<PricingCardInfo>
+									<PricingCardPlan>AAP</PricingCardPlan>
+									<PricingCardCost>Raj Verma</PricingCardCost>
+									<PricingCardText>I will bring Odd/Even Rule in the state and reduce pollution, also all our processes will be as transparent as blockchain.</PricingCardText>
+									
+									
+     
+									Votes: 0
+	
+    								
+								</PricingCardInfo>
+							</PricingCard>
 						
 							<PricingCard >
 								<PricingCardInfo>
@@ -114,6 +127,18 @@ useEffect(() => {
      
 									
 	
+    								
+								</PricingCardInfo>
+							</PricingCard>
+							<PricingCard >
+								<PricingCardInfo>
+									<PricingCardPlan>BSP</PricingCardPlan>
+									<PricingCardCost>Radhika Dubey</PricingCardCost>
+									<PricingCardText>I will never let prejudices and discrimination affect people. I will ensure women security and opportunities for women.</PricingCardText>
+									
+									
+     
+									Votes: 0
     								
 								</PricingCardInfo>
 							</PricingCard>
