@@ -51,7 +51,7 @@ function Timmer() {
   return (
     <div  style={{color: 'white'}} >
         
-        <Countdown date={'2022-11-15T06:35:00.417+05:30'} renderer={renderer} 
+        <Countdown date={'2022-11-15T11:00:00.417+05:30'} renderer={renderer} 
         />
         {/* <Countdown date={Date.now() + 10000} renderer={renderer} /> */}
       
