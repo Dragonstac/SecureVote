@@ -104,6 +104,8 @@ const Form = () => {
 
 							<FormButton type="submit" >Log In</FormButton>
 						</FormWrapper>
+						<br/>
+						<text>Not Registered? <a href='/signup'>SignUp</a></text>
 						{error && (
 							<FormMessage
 								variants={messageVariants}
@@ -124,7 +126,9 @@ const Form = () => {
 							</FormMessage>
 						)}
 					</FormColumn>
+					
 				</FormRow>
+				
 			</Container>
 		</FormSection>
 	);

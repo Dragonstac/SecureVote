@@ -13,7 +13,6 @@ import './nftlink.css'
 import { Dna } from  'react-loader-spinner'
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-
 import {
 	PricingSection,
 	PricingWrapper,
@@ -26,17 +25,19 @@ import {
 	PricingCardFeature,
 	PricingCard,
 } from './PricingStyles';
-import { pricingData } from '../../data/PricingData';
+
 import Particle2 from '../Particle2';
 import Timmer from './timmer';
+
+
+
+
+
 const getEthereumObject = () => window.ethereum;
 
-export function endVote(){
-	console.log("Voting End");
-}
 
   function Pricing() {
-
+	
 	const address = useAddress();
 	console.log(address);
 	const { ethereum } = window;
