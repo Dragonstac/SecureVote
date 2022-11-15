@@ -186,6 +186,23 @@ const getEthereumObject = () => window.ethereum;
 					<Timmer/>
 					<br/>
 					<PricingContainer>
+					<PricingCard >
+								<PricingCardInfo>
+									<PricingCardPlan>AAP</PricingCardPlan>
+									<PricingCardCost>Raj Verma</PricingCardCost>
+									<PricingCardText>I will bring Odd/Even Rule in the state and reduce pollution, also all our processes will be as transparent as blockchain.</PricingCardText>
+									
+									
+     
+									<Button >
+									
+										Vote Here
+										
+										</Button>
+	
+    								
+								</PricingCardInfo>
+							</PricingCard>
 						
 							<PricingCard >
 								<PricingCardInfo>
@@ -221,6 +238,24 @@ const getEthereumObject = () => window.ethereum;
     								
 								</PricingCardInfo>
 							</PricingCard>
+							<PricingCard >
+								<PricingCardInfo>
+									<PricingCardPlan>BSP</PricingCardPlan>
+									<PricingCardCost>Radhika Dubey</PricingCardCost>
+									<PricingCardText>I will never let prejudices and discrimination affect people. I will ensure women security and opportunities for women.</PricingCardText>
+									
+									
+     
+									<Button >
+									
+										Vote Here
+										
+										</Button>
+	
+    								
+								</PricingCardInfo>
+							</PricingCard>
+							
 							
 					</PricingContainer>
 					<br/>
